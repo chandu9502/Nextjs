@@ -24,7 +24,11 @@ export default function Home() {
     if (flag) {
       console.log("Updating product with ID:", flag);
       axios
-        .put(`http://localhost:3000/products/mobile/update/${flag}`, { brand, title, price })
+        .put(`http://localhost:3000/products/mobile/update/${flag}`, {
+          brand,
+          title,
+          price,
+        })
         .then((res) => {
           console.log("Product updated successfully:", res);
           fetchData();

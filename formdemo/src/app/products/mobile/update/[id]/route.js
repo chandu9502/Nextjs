@@ -10,7 +10,7 @@ DbConnect();
 export async function PUT(req, { params }) {
   const { id } = await params;
   if (!id) {
-    return NextResponse.json('ID is missing', { status: 400 });
+    return NextResponse.json('ID is missing...', { status: 400 });
   }
   const { brand, title, price } = await req.json();
   if (!brand || !title || !price) {
